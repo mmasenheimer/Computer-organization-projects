@@ -1,0 +1,3 @@
+HALF ADDER: false false -> false false
+FULL ADDER: false false false -> false false
+AdderX(4): a=0110 b=1110 -> sum=0100 : true false

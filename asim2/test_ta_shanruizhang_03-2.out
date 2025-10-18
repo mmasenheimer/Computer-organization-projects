@@ -1,0 +1,36 @@
++----------------+
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
+|AAAAAAAAAAAAAAAA|
++----------------+
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          0
+square:       1
+square_size:  18
+square_fill:  65
+runCheck:     0
+countWords:   0
+revString:    0
+str:          " This,is       
+    two"
+intArray_len: 5
+  39
+  39
+  39
+  39
+  39
+--- Testcase end---

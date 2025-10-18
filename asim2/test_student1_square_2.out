@@ -1,0 +1,14 @@
+++
+++
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          0
+square:       1
+square_size:  2
+square_fill:  46
+runCheck:     0
+countWords:   0
+str:          "  This is a test string "
+intArray_len: 1
+  93
+--- Testcase end---

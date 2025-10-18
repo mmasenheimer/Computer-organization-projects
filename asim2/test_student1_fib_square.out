@@ -1,0 +1,44 @@
+Fibonacci Numbers:
+  0: 1
+  1: 1
+  2: 2
+  3: 3
+  4: 5
+  5: 8
+  6: 13
+  7: 21
+  8: 34
+  9: 55
+  10: 89
+  11: 144
+  12: 233
+  13: 377
+  14: 610
+
++-------------+
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
+|ooooooooooooo|
++-------------+
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          14
+square:       1
+square_size:  15
+square_fill:  111
+runCheck:     0
+countWords:   0
+str:          "  This is a test string "
+intArray_len: 1
+  1
+--- Testcase end---

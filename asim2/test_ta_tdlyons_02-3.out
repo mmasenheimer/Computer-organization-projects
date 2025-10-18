@@ -1,0 +1,18 @@
+Run Check: ASCENDING
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          0
+square:       0
+square_size:  3
+square_fill:  32
+runCheck:     1
+countWords:   0
+revString:    0
+str:          "  This string is just six words long "
+intArray_len: 5
+  0
+  1
+  3
+  6
+  10
+--- Testcase end---

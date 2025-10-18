@@ -1,0 +1,20 @@
+Run Check: ASCENDING
+Run Check: DESCENDING
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          0
+square:       0
+square_size:  2
+square_fill:  109
+runCheck:     1
+countWords:   0
+revString:    0
+str:          " Don't swap this string "
+intArray_len: 6
+  3
+  3
+  3
+  3
+  3
+  3
+--- Testcase end---

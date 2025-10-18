@@ -1,0 +1,19 @@
+Word Count: 2
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          0
+square:       0
+square_size:  18
+square_fill:  65
+runCheck:     0
+countWords:   1
+revString:    0
+str:          " This,is       
+    two"
+intArray_len: 5
+  39
+  39
+  39
+  39
+  39
+--- Testcase end---

@@ -1,0 +1,21 @@
+Run Check: ASCENDING
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          0
+square:       0
+square_size:  10
+square_fill:  72
+runCheck:     1
+countWords:   0
+revString:    0
+str:          " Hello world
+           Hello world"
+intArray_len: 7
+  -10
+  -4
+  0
+  1
+  8
+  34
+  43
+--- Testcase end---

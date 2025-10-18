@@ -1,0 +1,15 @@
+Fibonacci Numbers:
+  0: 1
+  1: 1
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          1
+square:       0
+square_size:  8
+square_fill:  46
+runCheck:     0
+countWords:   0
+str:          "  This is a test string "
+intArray_len: 1
+  93
+--- Testcase end---

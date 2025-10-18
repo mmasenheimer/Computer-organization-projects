@@ -1,0 +1,13 @@
+String successfully swapped!
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          0
+square:       0
+square_size:  8
+square_fill:  46
+runCheck:     0
+countWords:   0
+str:          "ereh 0 a si ereht"
+intArray_len: 1
+  1
+--- Testcase end---

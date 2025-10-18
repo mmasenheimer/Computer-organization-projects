@@ -3,7 +3,7 @@
  * Author: Michael Masenheimer
  */
 
-public class Sim2_HalfAdder {
+public class HalfAdder {
 
     public void execute() {
         sumCompute.a.set(a.get());
@@ -36,7 +36,7 @@ public class Sim2_HalfAdder {
     public AND and1;
     // Gates
 
-    public Sim2_HalfAdder() {
+    public HalfAdder() {
 
         this.a = new RussWire();
         this.b = new RussWire();

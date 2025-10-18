@@ -1,0 +1,21 @@
+Run Check: ASCENDING
+Run Check: DESCENDING
+
+String successfully swapped!
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          0
+square:       0
+square_size:  8
+square_fill:  46
+runCheck:     1
+countWords:   0
+str:          " gnirts tset a si sihT  "
+intArray_len: 6
+  66
+  66
+  66
+  66
+  66
+  66
+--- Testcase end---
