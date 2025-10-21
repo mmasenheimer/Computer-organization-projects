@@ -1,0 +1,35 @@
+Opcode: 0x00   at 0x0000_0100
+  funct: 0x20
+  --
+  opcode  (6 bits)=0x00
+  rs      (5 bits)=0x13
+  rt      (5 bits)=0x14
+  rd      (5 bits)=0x08
+  shamt   (5 bits)=0x00
+  funct   (6 bits)=0x20
+  imm16  (16 bits)=0x     4020
+  imm32  (32 bits)=0x0000_4020
+  addr   (26 bits)=0x 274_4020
+  --
+  rsVal=0x1313_1313
+  rtVal=0x1414_1414
+  --
+  ALUsrc     =0
+  ALU.op     =2
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =1
+  regWrite   =1
+  branch     =0
+  jump       =0
+  --
+  ALU.result=0x2727_2727
+  ALU.zero  =0
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_0100 is: 0x0000_0104
+  reg[ 8] was: 0x0808_0808 is 0x2727_2727
+

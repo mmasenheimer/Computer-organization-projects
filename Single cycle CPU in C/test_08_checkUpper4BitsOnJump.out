@@ -1,0 +1,90 @@
+i= 0:
+  instruction = 0x08ee_b9f1
+  control:
+    opcode  = 0x02
+    address = 0x 0ee_b9f1
+    jump    = 1
+    branch  = 0
+
+i= 1:
+  instruction = 0x09e7_4bcc
+  control:
+    opcode  = 0x02
+    address = 0x 1e7_4bcc
+    jump    = 1
+    branch  = 0
+
+i= 2:
+  instruction = 0x0801_d315
+  control:
+    opcode  = 0x02
+    address = 0x 001_d315
+    jump    = 1
+    branch  = 0
+
+i= 3:
+  instruction = 0x0a2c_d0c6
+  control:
+    opcode  = 0x02
+    address = 0x 22c_d0c6
+    jump    = 1
+    branch  = 0
+
+i= 4:
+  instruction = 0x0848_3b7c
+  control:
+    opcode  = 0x02
+    address = 0x 048_3b7c
+    jump    = 1
+    branch  = 0
+
+i= 5:
+  instruction = 0x09a3_f638
+  control:
+    opcode  = 0x02
+    address = 0x 1a3_f638
+    jump    = 1
+    branch  = 0
+
+i= 6:
+  instruction = 0x08f9_4c0c
+  control:
+    opcode  = 0x02
+    address = 0x 0f9_4c0c
+    jump    = 1
+    branch  = 0
+
+i= 7:
+  instruction = 0x0965_f1c5
+  control:
+    opcode  = 0x02
+    address = 0x 165_f1c5
+    jump    = 1
+    branch  = 0
+
+i= 8:
+  instruction = 0x09b4_1405
+  control:
+    opcode  = 0x02
+    address = 0x 1b4_1405
+    jump    = 1
+    branch  = 0
+
+i= 9:
+  instruction = 0x0ae9_dc7a
+  control:
+    opcode  = 0x02
+    address = 0x 2e9_dc7a
+    jump    = 1
+    branch  = 0
+
+i= 0: oldPC=0x20ec_303a (addr<<2)=0x03ba_e7c4 -> newPC=0x23ba_0xe7c4
+i= 1: oldPC=0x575d_cd05 (addr<<2)=0x079d_2f30 -> newPC=0x579d_0x2f30
+i= 2: oldPC=0x749d_7dd9 (addr<<2)=0x0007_4c54 -> newPC=0x7007_0x4c54
+i= 3: oldPC=0x4d59_ef62 (addr<<2)=0x08b3_4318 -> newPC=0x48b3_0x4318
+i= 4: oldPC=0x034a_71d6 (addr<<2)=0x0120_edf0 -> newPC=0x0120_0xedf0
+i= 5: oldPC=0x3a8f_3eb8 (addr<<2)=0x068f_d8e0 -> newPC=0x368f_0xd8e0
+i= 6: oldPC=0x7878_2108 (addr<<2)=0x03e5_3030 -> newPC=0x73e5_0x3030
+i= 7: oldPC=0x2746_e8b1 (addr<<2)=0x0597_c714 -> newPC=0x2597_0xc714
+i= 8: oldPC=0x4473_7f8b (addr<<2)=0x06d0_5014 -> newPC=0x46d0_0x5014
+i= 9: oldPC=0x3963_ccd4 (addr<<2)=0x0ba7_71e8 -> newPC=0x3ba7_0x71e8

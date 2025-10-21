@@ -1,0 +1,255 @@
+PC: 0x0000_0000   Instruction: 0x0232_8020
+  rs      (5 bits)=0x11
+  rt      (5 bits)=0x12
+  imm16  (16 bits)=0x     8020
+  imm32  (32 bits)=0xffff_8020
+  ALUsrc     =0
+  ALU.op     =2
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x1111_1111
+  ALU input 2: 0x1212_1212
+  --
+  aluResult.result=0x2323_2323
+  aluResult.zero  =0
+
+PC: 0x0000_0004   Instruction: 0x0295_9822
+  rs      (5 bits)=0x14
+  rt      (5 bits)=0x15
+  imm16  (16 bits)=0x     9822
+  imm32  (32 bits)=0xffff_9822
+  ALUsrc     =0
+  ALU.op     =2
+  ALU.bNegate=1
+  --
+  ALU input 1: 0x1414_1414
+  ALU input 2: 0x1515_1515
+  --
+  aluResult.result=0xfefe_feff
+  aluResult.zero  =0
+
+PC: 0x0000_0008   Instruction: 0x216a_ffff
+  rs      (5 bits)=0x0b
+  rt      (5 bits)=0x0a
+  imm16  (16 bits)=0x     ffff
+  imm32  (32 bits)=0xffff_ffff
+  ALUsrc     =1
+  ALU.op     =2
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0b0b_0b0b
+  ALU input 2: 0xffff_ffff
+  --
+  aluResult.result=0x0b0b_0b0a
+  aluResult.zero  =0
+
+PC: 0x0000_000c   Instruction: 0x21ac_0010
+  rs      (5 bits)=0x0d
+  rt      (5 bits)=0x0c
+  imm16  (16 bits)=0x     0010
+  imm32  (32 bits)=0x0000_0010
+  ALUsrc     =1
+  ALU.op     =2
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0d0d_0d0d
+  ALU input 2: 0x0000_0010
+  --
+  aluResult.result=0x0d0d_0d1d
+  aluResult.zero  =0
+
+PC: 0x0000_0010   Instruction: 0x0002_0821
+  rs      (5 bits)=0x00
+  rt      (5 bits)=0x02
+  imm16  (16 bits)=0x     0821
+  imm32  (32 bits)=0x0000_0821
+  ALUsrc     =0
+  ALU.op     =2
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0000_0000
+  ALU input 2: 0x0202_0202
+  --
+  aluResult.result=0x0202_0202
+  aluResult.zero  =0
+
+PC: 0x0000_0014   Instruction: 0x0085_1823
+  rs      (5 bits)=0x04
+  rt      (5 bits)=0x05
+  imm16  (16 bits)=0x     1823
+  imm32  (32 bits)=0x0000_1823
+  ALUsrc     =0
+  ALU.op     =2
+  ALU.bNegate=1
+  --
+  ALU input 1: 0x0404_0404
+  ALU input 2: 0x0505_0505
+  --
+  aluResult.result=0xfefe_feff
+  aluResult.zero  =0
+
+PC: 0x0000_0018   Instruction: 0x24e6_1234
+  rs      (5 bits)=0x07
+  rt      (5 bits)=0x06
+  imm16  (16 bits)=0x     1234
+  imm32  (32 bits)=0x0000_1234
+  ALUsrc     =1
+  ALU.op     =2
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0707_0707
+  ALU input 2: 0x0000_1234
+  --
+  aluResult.result=0x0707_193b
+  aluResult.zero  =0
+
+PC: 0x0000_001c   Instruction: 0x014b_4824
+  rs      (5 bits)=0x0a
+  rt      (5 bits)=0x0b
+  imm16  (16 bits)=0x     4824
+  imm32  (32 bits)=0x0000_4824
+  ALUsrc     =0
+  ALU.op     =0
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0a0a_0a0a
+  ALU input 2: 0x0b0b_0b0b
+  --
+  aluResult.result=0x0a0a_0a0a
+  aluResult.zero  =0
+
+PC: 0x0000_0020   Instruction: 0x01ae_6025
+  rs      (5 bits)=0x0d
+  rt      (5 bits)=0x0e
+  imm16  (16 bits)=0x     6025
+  imm32  (32 bits)=0x0000_6025
+  ALUsrc     =0
+  ALU.op     =1
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0d0d_0d0d
+  ALU input 2: 0x0e0e_0e0e
+  --
+  aluResult.result=0x0f0f_0f0f
+  aluResult.zero  =0
+
+PC: 0x0000_0024   Instruction: 0x0211_7826
+  rs      (5 bits)=0x10
+  rt      (5 bits)=0x11
+  imm16  (16 bits)=0x     7826
+  imm32  (32 bits)=0x0000_7826
+  ALUsrc     =0
+  ALU.op     =4
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x1010_1010
+  ALU input 2: 0x1111_1111
+  --
+  aluResult.result=0x0101_0101
+  aluResult.zero  =0
+
+PC: 0x0000_002c   Instruction: 0x02d7_a82a
+  rs      (5 bits)=0x16
+  rt      (5 bits)=0x17
+  imm16  (16 bits)=0x     a82a
+  imm32  (32 bits)=0xffff_a82a
+  ALUsrc     =0
+  ALU.op     =3
+  ALU.bNegate=1
+  --
+  ALU input 1: 0x1616_1616
+  ALU input 2: 0x1717_1717
+  --
+  aluResult.result=0x0000_0001
+  aluResult.zero  =0
+
+PC: 0x0000_0030   Instruction: 0x2b38_ffff
+  rs      (5 bits)=0x19
+  rt      (5 bits)=0x18
+  imm16  (16 bits)=0x     ffff
+  imm32  (32 bits)=0xffff_ffff
+  ALUsrc     =1
+  ALU.op     =3
+  ALU.bNegate=1
+  --
+  ALU input 1: 0x1919_1919
+  ALU input 2: 0xffff_ffff
+  --
+  aluResult.result=0x0000_0000
+  aluResult.zero  =1
+
+PC: 0x0000_0034   Instruction: 0x8c1a_0068
+  rs      (5 bits)=0x00
+  rt      (5 bits)=0x1a
+  imm16  (16 bits)=0x     0068
+  imm32  (32 bits)=0x0000_0068
+  ALUsrc     =1
+  ALU.op     =2
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0000_0000
+  ALU input 2: 0x0000_0068
+  --
+  aluResult.result=0x0000_0068
+  aluResult.zero  =0
+
+PC: 0x0000_0038   Instruction: 0xac1d_006c
+  rs      (5 bits)=0x00
+  rt      (5 bits)=0x1d
+  imm16  (16 bits)=0x     006c
+  imm32  (32 bits)=0x0000_006c
+  ALUsrc     =1
+  ALU.op     =2
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0000_0000
+  ALU input 2: 0x0000_006c
+  --
+  aluResult.result=0x0000_006c
+  aluResult.zero  =0
+
+PC: 0x0000_003c   Instruction: 0x1020_0104
+  rs      (5 bits)=0x01
+  rt      (5 bits)=0x00
+  imm16  (16 bits)=0x     0104
+  imm32  (32 bits)=0x0000_0104
+  ALUsrc     =0
+  ALU.op     =2
+  ALU.bNegate=1
+  --
+  ALU input 1: 0x0101_0101
+  ALU input 2: 0x0000_0000
+  --
+  aluResult.result=0x0101_0101
+  aluResult.zero  =0
+
+PC: 0x0000_0040   Instruction: 0x0923_4567
+  rs      (5 bits)=0x09
+  rt      (5 bits)=0x03
+  imm16  (16 bits)=0x     4567
+  imm32  (32 bits)=0x0000_4567
+  ALUsrc     =0
+  ALU.op     =0
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x0909_0909
+  ALU input 2: 0x0303_0303
+  --
+  aluResult.result=0x0101_0101
+  aluResult.zero  =0
+
+PC: 0x0000_0044   Instruction: 0x0bff_ffff
+  rs      (5 bits)=0x1f
+  rt      (5 bits)=0x1f
+  imm16  (16 bits)=0x     ffff
+  imm32  (32 bits)=0xffff_ffff
+  ALUsrc     =0
+  ALU.op     =0
+  ALU.bNegate=0
+  --
+  ALU input 1: 0x1f1f_1f1f
+  ALU input 2: 0x1f1f_1f1f
+  --
+  aluResult.result=0x1f1f_1f1f
+  aluResult.zero  =0
+

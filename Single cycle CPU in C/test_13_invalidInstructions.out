@@ -1,0 +1,112 @@
+Bad Instruction: 0x63ff_ffff
+  --
+  opcode  (6 bits)=0x18
+  rs      (5 bits)=0x1f
+  rt      (5 bits)=0x1f
+  rd      (5 bits)=0x1f
+  shamt   (5 bits)=0x1f
+  funct   (6 bits)=0x3f
+  imm16  (16 bits)=0x     ffff
+  imm32  (32 bits)=0xffff_ffff
+  addr   (26 bits)=0x 3ff_ffff
+  --
+  fill_CPUControl() returned 0, as expected.
+  --
+  rsVal=0x1f1f_1f1f
+  rtVal=0x1f1f_1f1f
+  --
+  ALUsrc     =0
+  ALU.op     =0
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =0
+  regWrite   =0
+  branch     =0
+  jump       =0
+
+Bad Instruction: 0xf3f5_abcd
+  --
+  opcode  (6 bits)=0x3c
+  rs      (5 bits)=0x1f
+  rt      (5 bits)=0x15
+  rd      (5 bits)=0x15
+  shamt   (5 bits)=0x0f
+  funct   (6 bits)=0x0d
+  imm16  (16 bits)=0x     abcd
+  imm32  (32 bits)=0xffff_abcd
+  addr   (26 bits)=0x 3f5_abcd
+  --
+  fill_CPUControl() returned 0, as expected.
+  --
+  rsVal=0x1f1f_1f1f
+  rtVal=0x1515_1515
+  --
+  ALUsrc     =0
+  ALU.op     =0
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =0
+  regWrite   =0
+  branch     =0
+  jump       =0
+
+Bad Instruction: 0x0022_1cce
+  --
+  opcode  (6 bits)=0x00
+  rs      (5 bits)=0x01
+  rt      (5 bits)=0x02
+  rd      (5 bits)=0x03
+  shamt   (5 bits)=0x13
+  funct   (6 bits)=0x0e
+  imm16  (16 bits)=0x     1cce
+  imm32  (32 bits)=0x0000_1cce
+  addr   (26 bits)=0x 022_1cce
+  --
+  fill_CPUControl() returned 0, as expected.
+  --
+  rsVal=0x0101_0101
+  rtVal=0x0202_0202
+  --
+  ALUsrc     =0
+  ALU.op     =0
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =0
+  regWrite   =0
+  branch     =0
+  jump       =0
+
+Bad Instruction: 0x03ff_ffef
+  --
+  opcode  (6 bits)=0x00
+  rs      (5 bits)=0x1f
+  rt      (5 bits)=0x1f
+  rd      (5 bits)=0x1f
+  shamt   (5 bits)=0x1f
+  funct   (6 bits)=0x2f
+  imm16  (16 bits)=0x     ffef
+  imm32  (32 bits)=0xffff_ffef
+  addr   (26 bits)=0x 3ff_ffef
+  --
+  fill_CPUControl() returned 0, as expected.
+  --
+  rsVal=0x1f1f_1f1f
+  rtVal=0x1f1f_1f1f
+  --
+  ALUsrc     =0
+  ALU.op     =0
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =0
+  regWrite   =0
+  branch     =0
+  jump       =0
+

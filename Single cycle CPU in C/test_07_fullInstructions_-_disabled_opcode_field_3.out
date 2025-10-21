@@ -1,0 +1,308 @@
+Opcode: 0x00   at 0x0000_0000
+  funct: 0x25
+  --
+  opcode  (6 bits)=0x00
+  rs      (5 bits)=0x0d
+  rt      (5 bits)=0x0e
+  rd      (5 bits)=0x0c
+  shamt   (5 bits)=0x00
+  funct   (6 bits)=0x25
+  imm16  (16 bits)=0x     6025
+  imm32  (32 bits)=0x0000_6025
+  addr   (26 bits)=0x 1ae_6025
+  --
+  rsVal=0x0d0d_0d0d
+  rtVal=0x0e0e_0e0e
+  --
+  ALUsrc     =0
+  ALU.op     =1
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =1
+  regWrite   =1
+  branch     =0
+  jump       =0
+  --
+  ALU.result=0x0f0f_0f0f
+  ALU.zero  =0
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_0000 is: 0x0000_0004
+  reg[12] was: 0x0c0c_0c0c is 0x0f0f_0f0f
+
+Opcode: 0x00   at 0x0000_0004
+  funct: 0x26
+  --
+  opcode  (6 bits)=0x00
+  rs      (5 bits)=0x10
+  rt      (5 bits)=0x11
+  rd      (5 bits)=0x0f
+  shamt   (5 bits)=0x00
+  funct   (6 bits)=0x26
+  imm16  (16 bits)=0x     7826
+  imm32  (32 bits)=0x0000_7826
+  addr   (26 bits)=0x 211_7826
+  --
+  rsVal=0x1010_1010
+  rtVal=0x1111_1111
+  --
+  ALUsrc     =0
+  ALU.op     =4
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =1
+  regWrite   =1
+  branch     =0
+  jump       =0
+  --
+  ALU.result=0x0101_0101
+  ALU.zero  =0
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_0004 is: 0x0000_0008
+  reg[15] was: 0x0f0f_0f0f is 0x0101_0101
+
+Opcode: 0x00   at 0x0000_0008
+  funct: 0x2a
+  --
+  opcode  (6 bits)=0x00
+  rs      (5 bits)=0x16
+  rt      (5 bits)=0x17
+  rd      (5 bits)=0x15
+  shamt   (5 bits)=0x00
+  funct   (6 bits)=0x2a
+  imm16  (16 bits)=0x     a82a
+  imm32  (32 bits)=0xffff_a82a
+  addr   (26 bits)=0x 2d7_a82a
+  --
+  rsVal=0x1616_1616
+  rtVal=0x1717_1717
+  --
+  ALUsrc     =0
+  ALU.op     =3
+  ALU.bNegate=1
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =1
+  regWrite   =1
+  branch     =0
+  jump       =0
+  --
+  ALU.result=0x0000_0001
+  ALU.zero  =0
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_0008 is: 0x0000_000c
+  reg[21] was: 0x1515_1515 is 0x0000_0001
+
+Opcode: 0x0a   at 0x0000_000c
+  --
+  opcode  (6 bits)=0x0a
+  rs      (5 bits)=0x19
+  rt      (5 bits)=0x18
+  rd      (5 bits)=0x1f
+  shamt   (5 bits)=0x1f
+  funct   (6 bits)=0x3f
+  imm16  (16 bits)=0x     ffff
+  imm32  (32 bits)=0xffff_ffff
+  addr   (26 bits)=0x 338_ffff
+  --
+  rsVal=0x1919_1919
+  rtVal=0x1818_1818
+  --
+  ALUsrc     =1
+  ALU.op     =3
+  ALU.bNegate=1
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =0
+  regWrite   =1
+  branch     =0
+  jump       =0
+  --
+  ALU.result=0x0000_0000
+  ALU.zero  =1
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_000c is: 0x0000_0010
+  reg[24] was: 0x1818_1818 is 0x0000_0000
+
+Opcode: 0x23   at 0x0000_0010
+  --
+  opcode  (6 bits)=0x23
+  rs      (5 bits)=0x00
+  rt      (5 bits)=0x1a
+  rd      (5 bits)=0x00
+  shamt   (5 bits)=0x01
+  funct   (6 bits)=0x28
+  imm16  (16 bits)=0x     0068
+  imm32  (32 bits)=0x0000_0068
+  addr   (26 bits)=0x 01a_0068
+  --
+  rsVal=0x0000_0000
+  rtVal=0x1a1a_1a1a
+  --
+  ALUsrc     =1
+  ALU.op     =2
+  ALU.bNegate=0
+  memRead    =1
+  memWrite   =0
+  memToReg   =1
+  regDst     =0
+  regWrite   =1
+  branch     =0
+  jump       =0
+  --
+  ALU.result=0x0000_0068
+  ALU.zero  =0
+  --
+  memResult.readVal=0xffff_0068
+  --
+  PC was: 0x0000_0010 is: 0x0000_0014
+  reg[26] was: 0x1a1a_1a1a is 0xffff_0068
+
+Opcode: 0x2b   at 0x0000_0014
+  --
+  opcode  (6 bits)=0x2b
+  rs      (5 bits)=0x00
+  rt      (5 bits)=0x1d
+  rd      (5 bits)=0x00
+  shamt   (5 bits)=0x01
+  funct   (6 bits)=0x2c
+  imm16  (16 bits)=0x     006c
+  imm32  (32 bits)=0x0000_006c
+  addr   (26 bits)=0x 01d_006c
+  --
+  rsVal=0x0000_0000
+  rtVal=0x1d1d_1d1d
+  --
+  ALUsrc     =1
+  ALU.op     =2
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =1
+  memToReg   =0
+  regDst     =0
+  regWrite   =0
+  branch     =0
+  jump       =0
+  --
+  ALU.result=0x0000_006c
+  ALU.zero  =0
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_0014 is: 0x0000_0018
+  mem[27] was: 0xffff_006c is 0x1d1d_1d1d
+
+Opcode: 0x04   at 0x0000_0018
+  --
+  opcode  (6 bits)=0x04
+  rs      (5 bits)=0x0a
+  rt      (5 bits)=0x0a
+  rd      (5 bits)=0x00
+  shamt   (5 bits)=0x00
+  funct   (6 bits)=0x01
+  imm16  (16 bits)=0x     0001
+  imm32  (32 bits)=0x0000_0001
+  addr   (26 bits)=0x 14a_0001
+  --
+  rsVal=0x0a0a_0a0a
+  rtVal=0x0a0a_0a0a
+  --
+  ALUsrc     =0
+  ALU.op     =2
+  ALU.bNegate=1
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =0
+  regWrite   =0
+  branch     =1
+  jump       =0
+  --
+  ALU.result=0x0000_0000
+  ALU.zero  =1
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_0018 is: 0x0000_0020
+
+Opcode: 0x04   at 0x0000_0020
+  --
+  opcode  (6 bits)=0x04
+  rs      (5 bits)=0x0a
+  rt      (5 bits)=0x00
+  rd      (5 bits)=0x1f
+  shamt   (5 bits)=0x1f
+  funct   (6 bits)=0x36
+  imm16  (16 bits)=0x     fff6
+  imm32  (32 bits)=0xffff_fff6
+  addr   (26 bits)=0x 140_fff6
+  --
+  rsVal=0x0a0a_0a0a
+  rtVal=0x0000_0000
+  --
+  ALUsrc     =0
+  ALU.op     =2
+  ALU.bNegate=1
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =0
+  regWrite   =0
+  branch     =1
+  jump       =0
+  --
+  ALU.result=0x0a0a_0a0a
+  ALU.zero  =0
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_0020 is: 0x0000_0024
+
+Opcode: 0x08   at 0x0000_0024
+  --
+  opcode  (6 bits)=0x08
+  rs      (5 bits)=0x00
+  rt      (5 bits)=0x02
+  rd      (5 bits)=0x00
+  shamt   (5 bits)=0x00
+  funct   (6 bits)=0x0a
+  imm16  (16 bits)=0x     000a
+  imm32  (32 bits)=0x0000_000a
+  addr   (26 bits)=0x 002_000a
+  --
+  rsVal=0x0000_0000
+  rtVal=0x0202_0202
+  --
+  ALUsrc     =1
+  ALU.op     =2
+  ALU.bNegate=0
+  memRead    =0
+  memWrite   =0
+  memToReg   =0
+  regDst     =0
+  regWrite   =1
+  branch     =0
+  jump       =0
+  --
+  ALU.result=0x0000_000a
+  ALU.zero  =0
+  --
+  memResult.readVal=0x0000_0000
+  --
+  PC was: 0x0000_0024 is: 0x0000_0028
+  reg[ 2] was: 0x0202_0202 is 0x0000_000a
+
+[systemCall]--- syscall 10 executed: Normal termination of the assembly language program.
