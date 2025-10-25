@@ -546,7 +546,7 @@ studentMain:
 	la $a0, swapstring
 	syscall
 	
-	addi $v0, $zero, 4		# print_str("\n"
+	addi $v0, $zero, 4		# print_str("\n")
 	la $a0, newline
 	syscall
 	

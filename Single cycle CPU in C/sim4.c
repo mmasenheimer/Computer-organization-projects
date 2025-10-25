@@ -9,6 +9,8 @@ bit getters and setters
 Author: Michael Masenheimer
 */
 
+// FIELDS I'M ADDING: SLL, BNE, NOR
+
 #include "sim4.h"
 
 /*
@@ -80,6 +82,12 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
         controlOut->memToReg = 0;
         controlOut->branch   = 0;
         controlOut->jump     = 0;
+
+        if (fields->funct == 0) {
+            // SLL
+            // TODO: implement this
+        }
+
         
         if (fields->funct == 32 || fields->funct == 33) {
             // add or addu instruction
