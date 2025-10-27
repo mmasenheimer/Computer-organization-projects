@@ -1,7 +1,8 @@
 /*
 Simulates Instruction parsing and cpu control for a single
-clock cycle CPU. This is milestone 1, so later I'll be implementing
-each individual CPU component.
+clock cycle CPU. This program takes an instruction, separates each
+part and executes the different simulated hardware based on that
+instruction.
 
 There are no outputs, as the whole program is one big conglomeration of 
 bit getters and setters
@@ -31,7 +32,7 @@ void extract_instructionFields(WORD instruction, InstructionFields* fieldsOut) {
     fieldsOut->rd     = (instruction >> 11) & 0x1F;     // bits 15-11
     fieldsOut->shamt  = (instruction >> 6)  & 0x1F;     // bits 10-6
     fieldsOut->funct  = instruction & 0x3F;             // bits 5-0
-    fieldsOut->imm16    = instruction & 0xFFFF;         // bits 15-0
+    fieldsOut->imm16  = instruction & 0xFFFF;           // bits 15-0
 
     if (fieldsOut->imm16 & 0x8000) {
         fieldsOut->imm32 = fieldsOut->imm16 | 0xFFFF0000;
@@ -51,7 +52,7 @@ This function takes the fields in the InstructionFields
 set by the previous function and translates them
 into actual bitwise CPU control wires.
 
-Returns nothing
+Returns 0 or 1 if the opcode is valid or not
 */
 
 int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
@@ -81,16 +82,20 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
             return 0;
         }
 
-        // if (fields->funct == 0) {
-        //     // SLL
-        //     // TODO: implement this
-        // }
+        if (fields->funct == 0) {
+            // SLL
 
+            controlOut->regDst = 1;
+            controlOut->regWrite = 1;
+            controlOut->ALU.op = 5;
+
+            return 1;
+        }
         
         if (fields->funct == 32 || fields->funct == 33) {
             // add or addu instruction
 
-            controlOut->regDst   = 1;
+            controlOut->regDst = 1;
             controlOut->regWrite = 1;
             controlOut->ALU.op = 2;
             controlOut->ALU.bNegate = 0;
@@ -101,7 +106,7 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
         if (fields->funct == 34 || fields->funct == 35) {
             // sub or subbu instruction
 
-            controlOut->regDst   = 1;
+            controlOut->regDst = 1;
             controlOut->regWrite = 1;
             controlOut->ALU.op = 2;
             controlOut->ALU.bNegate = 1;
@@ -112,7 +117,7 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
         if (fields->funct == 36) {
             // AND instruction
 
-            controlOut->regDst   = 1;
+            controlOut->regDst = 1;
             controlOut->regWrite = 1;
             controlOut->ALU.op = 0;
             controlOut->ALU.bNegate = 0;
@@ -123,7 +128,7 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
         if (fields->funct == 37) {
             // OR instruction
 
-            controlOut->regDst   = 1;
+            controlOut->regDst = 1;
             controlOut->regWrite = 1;
             controlOut->ALU.op = 1;
             controlOut->ALU.bNegate = 0;
@@ -134,7 +139,7 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
         if (fields->funct == 38) {
             // XOR instruction
 
-            controlOut->regDst   = 1;
+            controlOut->regDst = 1;
             controlOut->regWrite = 1;
             controlOut->ALU.op = 4;
             controlOut->ALU.bNegate = 0;
@@ -142,10 +147,20 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
             return 1;
         }
 
+        if (fields->funct == 39) {
+            // NOR instruction
+
+            controlOut->regDst = 1;
+            controlOut->regWrite = 1;
+            controlOut->ALU.op = 6;
+
+            return 1;
+        }
+
         if (fields->funct == 42) {
             // SLT instruction
 
-            controlOut->regDst   = 1;
+            controlOut->regDst = 1;
             controlOut->regWrite = 1;
             controlOut->ALU.op = 3;
             controlOut->ALU.bNegate = 1;
@@ -157,7 +172,9 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
 
     if (fields->opcode == 2) {
         // Jump code instruction
+
         controlOut->jump = 1;
+
         return 1;
     }
 
@@ -167,6 +184,18 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
         controlOut->branch = 1;
         controlOut->ALU.op = 2;
         controlOut->ALU.bNegate = 1;
+        controlOut->extra1 = 0;
+
+        return 1;
+    }
+
+    if (fields->opcode == 5) {
+        // BNE instruction
+
+        controlOut->ALU.op = 2;
+        controlOut->ALU.bNegate = 1;
+        controlOut->branch = 1;
+        controlOut->extra1 = 1;
 
         return 1;
     }
@@ -175,19 +204,18 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
         // addi and addiu instruction
 
         controlOut->regWrite = 1;
-        controlOut->ALUsrc   = 1;
+        controlOut->ALUsrc = 1;
         controlOut->ALU.op = 2;
         controlOut->ALU.bNegate = 0;
 
         return 1;
-
     }
 
     if (fields->opcode == 10) {
         // SLTI instruciton
 
         controlOut->regWrite = 1;
-        controlOut->ALUsrc   = 1;
+        controlOut->ALUsrc = 1;
         controlOut->ALU.op = 3;
         controlOut->ALU.bNegate = 1;
 
@@ -198,20 +226,19 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
         // LW instruction
 
         controlOut->regWrite = 1;
-        controlOut->ALUsrc   = 1;
-        controlOut->memRead  = 1;
+        controlOut->ALUsrc = 1;
+        controlOut->memRead = 1;
         controlOut->memToReg = 1;
         controlOut->ALU.op = 2;
         controlOut->ALU.bNegate = 0;
 
         return 1;
-
     }
 
     if (fields->opcode == 43) {
         // SW instruction
 
-        controlOut->ALUsrc   = 1;
+        controlOut->ALUsrc = 1;
         controlOut->memWrite = 1;
         controlOut->ALU.op = 2;
         controlOut->ALU.bNegate = 0;
@@ -223,16 +250,31 @@ int fill_CPUControl(InstructionFields* fields, CPUControl* controlOut) {
     // Catch invalid opcode
 }
 
+/*
+getInstruction(curPC, *InstructionFields)
+
+This function takes in the current pc counter and returns
+the memory asssociated with the instruction
+
+Returns the instruction associated with the instruction pointer
+*/
+
 WORD getInstruction(WORD curPC, WORD *instructionMemory) {
 
-    // curPC and instructionMemory are 32 bits in size
     // curPC is byte address
 
     int currentInstruction = curPC / 4;
     return *(instructionMemory + currentInstruction);
-
 }
 
+/*
+getALUinput1(*controlIn, *fieldsin, rsVal, rtVal, reg32, reg33, oldPC)
+
+This function grabs the first input to the ALU, but
+makes sure to check the operation before returning the correct value
+
+Returns either rtVal or rsVal as the first alu input
+*/
 WORD getALUinput1(CPUControl *controlIn, InstructionFields *fieldsIn, WORD rsVal, WORD rtVal, WORD reg32, WORD reg33, WORD oldPC) {
 
     // INCLUDES:
@@ -242,9 +284,25 @@ WORD getALUinput1(CPUControl *controlIn, InstructionFields *fieldsIn, WORD rsVal
     // Value of registers 33 and 34 (OPTIONAL FOR MULT)
     // Value of PC currently executing instruction(OPTIONAL FOR EXTRA FUNCTIONS)
 
+    // Special case for SLL: input1 should be rtVal
+        if (controlIn->ALU.op == 5) {
+
+        // Check using the ALU operation
+        return rtVal;
+    }
+
     return rsVal;
 }
 
+/*
+getALUinput1(*controlIn, *fieldsin, rsVal, rtVal, reg32, reg33, oldPC)
+
+This function grabs the second ALU operation and returns it, also checking
+for special control cases.
+
+Returns the shift amount, immediate 32 bit value, or the rtVal
+depending on the control operation.
+*/
 WORD getALUinput2(CPUControl *controlIn, InstructionFields *fieldsIn, WORD rsVal, WORD rtVal, WORD reg32, WORD reg33, WORD oldPC) {
 
     // INCLUDES:
@@ -254,7 +312,14 @@ WORD getALUinput2(CPUControl *controlIn, InstructionFields *fieldsIn, WORD rsVal
     // Value of registers 33 and 34 (OPTIONAL FOR MULT)
     // Value of PC currently executing instruction(OPTIONAL FOR EXTRA FUNCTIONS)
 
+    // Special case for SLL: input2 is the shift amount
+    if (controlIn->ALU.op == 5) {
+        // Return the shift amount from the input instruction
+        return fieldsIn->shamt;
+    }
+
     if (controlIn->ALUsrc == 1) {
+        // Return the immediate 32 bit value if the alu is turned on
         return fieldsIn->imm32;
     }
 
@@ -289,7 +354,6 @@ void execute_ALU(CPUControl *controlIn, WORD input1, WORD input2, ALUResult *alu
             case 0:
                 aluResultOut->result = input1 + input2;
                 break;
-            
                 
             // Case SUBTRACT
             case 1:
@@ -309,12 +373,23 @@ void execute_ALU(CPUControl *controlIn, WORD input1, WORD input2, ALUResult *alu
         aluResultOut->result = input1 ^ input2;
         break;
     
+    // Case SHIFT
+    case 5:
+        aluResultOut->result = input1 << input2;
+        break;
+    
+    // Case NOR
+    case 6:
+        aluResultOut->result = ~(input1 | input2);
+        break;
+    
     // Unrecognized ALU operation
     default:
         break;
     }
 
     if (aluResultOut->result == 0) {
+        // If result of the alu is 0, turn ALUZero on
         aluResultOut->zero = 1;
     }
    
@@ -322,6 +397,18 @@ void execute_ALU(CPUControl *controlIn, WORD input1, WORD input2, ALUResult *alu
         aluResultOut->zero = 0;
     }
 }
+
+/*
+execute_MEM(*controlIn, *aluResultsIn, rsVal, rtVal, *memory, *resultOut)
+
+This function executes the memory, depending on the memread or
+memwrite value. It either reads from or writes to the memory, whuich
+is represented by a word array. *memory points to the address of
+the start of the array.
+
+Returns: Nothing, but sets the memory result value, saving and reading
+accordingly.
+*/
 
 void execute_MEM(CPUControl *controlIn, ALUResult *aluResultIn, WORD rsVal, WORD rtVal, WORD *memory, MemResult  *resultOut) {
 
@@ -331,12 +418,10 @@ void execute_MEM(CPUControl *controlIn, ALUResult *aluResultIn, WORD rsVal, WORD
     // RS, RT values set in the instruction decoding
     // *memory is an array of WORDS, representing data memory
     // result out * if we read a value from memory, then this fields must have the value
-    //
     // If we write, or do nothing, set this to zero
 
-    // If we read from memory or not
-
     resultOut->readVal = 0;
+    // If we read from memory or not
 
     switch (controlIn->memRead) {
         // Case READ 
@@ -352,9 +437,8 @@ void execute_MEM(CPUControl *controlIn, ALUResult *aluResultIn, WORD rsVal, WORD
     }
 
     switch (controlIn->memWrite) {       
-        // WRITE
+        // WRITE to memory
         case 1:
-
             *(memory + aluResultIn->result / 4) = rtVal;
             break;
 
@@ -365,17 +449,27 @@ void execute_MEM(CPUControl *controlIn, ALUResult *aluResultIn, WORD rsVal, WORD
     }
 }
 
+/*
+getNextPC(*fields, *controlIn, aluZero, rsVal, rtVal, oldPC)
+
+This function keeps track of where the current PC is, and updates
+the PC accordingly depending on if we branch, jump or not
+
+Returns: the new PC after the instruction has been executed.
+*/
 WORD getNextPC(InstructionFields *fields, CPUControl *controlIn, int aluZero, WORD rsVal, WORD rtVal, WORD oldPC) {
     
     WORD newPC = oldPC + 4;
 
     // Check if it's a branch instruction
     if (controlIn->branch == 1) {
-        // BEQ - only take branch if ALU result was zero
-        if (aluZero == 1) {
-            newPC = oldPC + 4 + (fields->imm32 << 2);
-        }
+        
+    int shouldBranch = (controlIn->extra1 == 0) ? (aluZero == 1) : (aluZero == 0);
+    
+    if (shouldBranch) {
+        newPC = oldPC + 4 + (fields->imm32 << 2);
     }
+}
     // Check if it's a jump instruction
     else if (controlIn->jump == 1) {
         // J instruction
@@ -385,6 +479,15 @@ WORD getNextPC(InstructionFields *fields, CPUControl *controlIn, int aluZero, WO
     return newPC;
 }
 
+/*
+execute_updateRegs(*fields, *controlIN, *aluResultsIn, *memResultIn, *regs)
+
+This function updates the registers (if needed) that were involved in the
+instruction operation.
+
+Returns: Nothing, just sets the registers
+
+*/
 void execute_updateRegs(InstructionFields *fields, CPUControl *controlIn, ALUResult  *aluResultIn, MemResult *memResultIn, WORD *regs) {
 
     // INPUTS:
@@ -413,6 +516,7 @@ void execute_updateRegs(InstructionFields *fields, CPUControl *controlIn, ALURes
         // R-type instruction, the target is rd
         writeReg = fields->rd;
     }
+
     if (controlIn->memToReg == 0) {
         writeVal = aluResultIn->result;
     }
