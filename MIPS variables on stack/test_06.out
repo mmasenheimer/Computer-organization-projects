@@ -1,0 +1,48 @@
+----------------
+Kermit the Frog.  You will never know exactly why I was inspired to come up with this quote - but I'll give you a tiny hint; he's in the thumbnail of a YouTube video - I'm watching something else while I type this.
+----------------
+a: 6
+b: 3
+c: 3
+d: 2
+e: 18
+f: 2
+g: 4
+h: 12
+i: 20
+j: 0
+k: 2
+l: 8
+m: 5
+n: 9
+o: 11
+p: 3
+q: 1
+r: 4
+s: 7
+t: 17
+u: 8
+v: 3
+w: 7
+x: 1
+y: 7
+z: 0
+<other>: 51
+
++-----------------------------------------------------------+
+|    Magic Value (popped from the stack):                   |
++-----------------------------------------------------------+
+bdb542db
+
++-----------------------------------------------------------+
+|    Testcase Register Dump (fp, then 8 sX regs):           |
++-----------------------------------------------------------+
+0cb003be
+22dfc51c
+1abf856e
+d119ed8c
+080d48f2
+8c23bdbd
+cecf8827
+f09f055a
+e60911b8

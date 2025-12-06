@@ -1,0 +1,94 @@
+pSS(dup) version 1: dup=H8DA
+------------ Original String ------------
+asdf
+----------------- Map -------------------
+................................................qwertyuiop.......asdfghjklzxcvbnmMNBVCXZLKJ......HGFDSAPOIUYTREWQ0987654321.....
+-----------------------------------------
+pSS(dup) version 1: dup=ASDF
+------------ Original String ------------
+asdf
+----------------- Map -------------------
+................................................)!@#$%^&*(.......abcdefghijklmnopqrstuvwxyz......ABCDEFGHIJKLMNOPQRSTUVWXYZ.....
+-----------------------------------------
+pSS(dup) version 1: dup=wer.tyu.iop
+------------ Original String ------------
+123
+456
+789
+----------------- Map -------------------
+................................................qwertyuiop.......asdfghjklzxcvbnmMNBVCXZLKJ......HGFDSAPOIUYTREWQ0987654321.....
+-----------------------------------------
+pSS(dup) version 1: dup=!@#.$%^.&*(
+------------ Original String ------------
+123
+456
+789
+----------------- Map -------------------
+................................................)!@#$%^&*(.......abcdefghijklmnopqrstuvwxyz......ABCDEFGHIJKLMNOPQRSTUVWXYZ.....
+-----------------------------------------
+pSS(dup) version 1: dup=VOS.06IFY.G9W4E.AW3.U6RQSD.W5S9.7OS.TH12.DWP.
+------------ Original String ------------
+The quick brown fox jumped over the lazy dog.
+----------------- Map -------------------
+................................................qwertyuiop.......asdfghjklzxcvbnmMNBVCXZLKJ......HGFDSAPOIUYTREWQ0987654321.....
+-----------------------------------------
+pSS(dup) version 1: dup=tHE.QUICK.BROWN.FOX.JUMPED.OVER.THE.LAZY.DOG.
+------------ Original String ------------
+The quick brown fox jumped over the lazy dog.
+----------------- Map -------------------
+................................................)!@#$%^&*(.......abcdefghijklmnopqrstuvwxyz......ABCDEFGHIJKLMNOPQRSTUVWXYZ.....
+-----------------------------------------
+pSS(dup) version 1: dup=04S9726IWQH8DAPOUYT13F5GER
+------------ Original String ------------
+qwertyuiopasdfghjklzxcvbnm
+----------------- Map -------------------
+................................................qwertyuiop.......asdfghjklzxcvbnmMNBVCXZLKJ......HGFDSAPOIUYTREWQ0987654321.....
+-----------------------------------------
+pSS(dup) version 1: dup=QWERTYUIOPASDFGHJKLZXCVBNM
+------------ Original String ------------
+qwertyuiopasdfghjklzxcvbnm
+----------------- Map -------------------
+................................................)!@#$%^&*(.......abcdefghijklmnopqrstuvwxyz......ABCDEFGHIJKLMNOPQRSTUVWXYZ.....
+-----------------------------------------
+pSS(dup) version 1: dup=asdfghasdfghasdfghasdfgh
+------------ Original String ------------
+ABCDEFABCDEFABCDEFABCDEF
+----------------- Map -------------------
+................................................qwertyuiop.......asdfghjklzxcvbnmMNBVCXZLKJ......HGFDSAPOIUYTREWQ0987654321.....
+-----------------------------------------
+pSS(dup) version 1: dup=abcdefabcdefabcdefabcdef
+------------ Original String ------------
+ABCDEFABCDEFABCDEFABCDEF
+----------------- Map -------------------
+................................................)!@#$%^&*(.......abcdefghijklmnopqrstuvwxyz......ABCDEFGHIJKLMNOPQRSTUVWXYZ.....
+-----------------------------------------
+pSS(dup) version 1: dup=3K1L2J3322
+------------ Original String ------------
+xYzXyZxxyy
+----------------- Map -------------------
+................................................qwertyuiop.......asdfghjklzxcvbnmMNBVCXZLKJ......HGFDSAPOIUYTREWQ0987654321.....
+-----------------------------------------
+pSS(dup) version 1: dup=XyZxYzXXYY
+------------ Original String ------------
+xYzXyZxxyy
+----------------- Map -------------------
+................................................)!@#$%^&*(.......abcdefghijklmnopqrstuvwxyz......ABCDEFGHIJKLMNOPQRSTUVWXYZ.....
+-----------------------------------------
+
++-----------------------------------------------------------+
+|    Magic Value (popped from the stack):                   |
++-----------------------------------------------------------+
+31c6d22b
+
++-----------------------------------------------------------+
+|    Testcase Register Dump (fp, then 8 sX regs):           |
++-----------------------------------------------------------+
+43847767
+ac634282
+9b5fd006
+13737c9d
+923d0494
+715c203d
+bf5be260
+cd057c10
+93618268

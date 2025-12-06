@@ -1,0 +1,30 @@
+pSS(dup) version 3: dup=z.NZK.RH.IVEVIHRYOV.RU.RG.RH.Z.8.GL.8.IVOZGRLM.YVGDVVM.Z.HVG.ZMW.RGHVOU..ZG.OVZHG..RM.GSRH.XLMGVCG.LU.Z.HFYHGRGFGRLM.XRKSVI....gSVHV.NZKH.ZIV..mlg..ZXGFZOOB.IVEVIHRYOV..YVXZFHV.OLGH.LU.WRUUVIVMG.XSZIZXGVIH.NZK.GL.GSV.KVIRLW.XSZIZXGVI.
+------------ Original String ------------
+A map is reversible if it is a 1-to-1 relation between a set and itself (at least, in this context of a substitution cipher).  These maps are *NOT* actually reversible, because lots of different characters map to the period character.
+----------------- Map -------------------
+................................................9876543210.......zyxwvutsrqponmlkjihgfedcba......ZYXWVUTSRQPONMLKJIHGFEDCBA.....
+-----------------------------------------
+pSS(dup) version 3: dup=K.wkz.s2.1o5o12slvo.sp.s3.s2.k.B.3y.B.1ovk3syx.lo36oox.k.2o3.kxn.s32ovp..k3.vok23..sx.3rs2.myx3o73.yp.k.24l23s343syx.mszro1....dro2o.wkz2.k1o..XYd..km34kvv8.1o5o12slvo..lomk42o.vy32.yp.nsppo1ox3.mrk1km3o12.wkz.3y.3ro.zo1syn.mrk1km3o1.
+------------ Original String ------------
+A map is reversible if it is a 1-to-1 relation between a set and itself (at least, in this context of a substitution cipher).  These maps are *NOT* actually reversible, because lots of different characters map to the period character.
+----------------- Map -------------------
+................................................ABCDEFGHIJ.......KLMNOPQRSTUVWXYZabcdefghij......klmnopqrstuvwxyz0123456789.....
+-----------------------------------------
+
++-----------------------------------------------------------+
+|    Magic Value (popped from the stack):                   |
++-----------------------------------------------------------+
+bdb542db
+
++-----------------------------------------------------------+
+|    Testcase Register Dump (fp, then 8 sX regs):           |
++-----------------------------------------------------------+
+0cb003be
+22dfc51c
+1abf856e
+d119ed8c
+080d48f2
+8c23bdbd
+cecf8827
+f09f055a
+e60911b8
